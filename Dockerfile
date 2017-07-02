@@ -5,7 +5,7 @@
 FROM python:2.7-alpine
 MAINTAINER Chris Weyl <cweyl@alumni.drew.edu>
 
-RUN pip install vim-vint
+RUN pip --no-cache-dir install vim-vint
 COPY do-vint.sh /bin/do-vint.sh
 
 ENTRYPOINT [ "do-vint.sh" ]
