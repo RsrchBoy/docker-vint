@@ -6,9 +6,7 @@
 #
 # Chris Weyl <cweyl@alumni.drew.edu> 2017
 
-LINTED_FILE=${1:-linting.vim}
-
-mkdir -p "$(dirname "$LINTED_FILE")"
+LINTED_FILE="linting.vim"
 
 cat - > "$LINTED_FILE"
-vint "$LINTED_FILE"
+vint "$@" "$LINTED_FILE"
